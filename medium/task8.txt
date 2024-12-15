@@ -1,0 +1,34 @@
+// https://edabit.com/challenge/gBYEFXeD9G2JMZ9dD
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+
+namespace practice
+{
+    internal class Program
+    {
+        public static bool ValidatePIN(string pin)
+        {
+            if(pin.Length == 4 || pin.Length == 6)
+            {
+                return (Regex.IsMatch(pin, @"^[0-9]+$") && !Regex.IsMatch(pin, @"^[a-zA-Z]+$"));
+            }
+            else
+            {
+                return false;
+            }
+            //return (pin.Length >= 4 && pin.Length <= 6 && Regex.IsMatch(pin, @"^[0-9]+$") && !Regex.IsMatch(pin, @"^[a-zA-Z]+$"));
+        }
+        static void Main(string[] args)
+        {
+            Console.WriteLine(ValidatePIN("12345")); // False
+            Console.WriteLine(ValidatePIN("a234")); //False
+
+            Console.ReadLine();
+        }
+    }
+}

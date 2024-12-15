@@ -1,0 +1,26 @@
+https://edabit.com/challenge/JYEufqRvkusjr5R58
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace forwork
+{
+    internal class Program
+    {
+        
+        public static string Bomb(string txt)
+        {
+            return txt.ToLower().Contains("bomb") ? "Duck!!!" : "There is no bomb, relax.";
+        }
+
+
+        static void Main(string[] args)
+        {
+            //Console.WriteLine(Bomb("SZIAA"));
+            Console.ReadLine();
+        }
+    }
+}

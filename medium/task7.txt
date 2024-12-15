@@ -1,0 +1,38 @@
+//https://edabit.com/challenge/F6m5ZRyzK5fmqTrBG
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace forwork
+{
+    internal class Program
+    {
+
+        public static int collatz(int num)
+        {
+            int s = 0;
+            int x = num;
+            while (x != 1)
+            {
+                /*if(x%2 == 0)
+                {
+                    x = x / 2;
+                }
+                else
+                {
+                    x = x * 3 + 1;
+                }
+		*/
+		x = (x % 2 == 0) ? x / 2 : x * 3 + 1;
+                s++;
+            }
+            return s;
+        }
+        static void Main(string[] args)
+        {
+            
+    }
+}

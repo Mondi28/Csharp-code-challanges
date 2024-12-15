@@ -1,0 +1,30 @@
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+https://edabit.com/challenge/99oN5igrbXddAjHEL
+
+using System;
+
+public class HelloWorld
+{
+    public static string ReverseCase(string str) 
+    {
+        
+        char[] letters = new char[str.Length];
+        for(int i = 0; i<str.Length; i++) {
+            if(Char.IsUpper(str[i])) {
+                letters[i] = Char.ToLower(str[i]);
+            }
+            else {
+                letters[i] = Char.ToUpper(str[i]);
+            }
+            
+        }
+        string response = string.Join("", letters);
+        
+        return response;
+    }
+    public static void Main(string[] args)
+    {
+        Console.WriteLine(ReverseCase("Hello World."));
+    }
+}

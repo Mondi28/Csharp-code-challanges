@@ -1,0 +1,42 @@
+https://edabit.com/challenge/6qFnpAhd3kdmYcNG2
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace forwork
+{
+    internal class Program
+    {
+        public static int[] IndexOfCapitals(string str)
+        {
+            
+            Queue<int> queue = new Queue<int>();
+
+            char[] chars = str.ToCharArray();
+            for (int i = 0; i < chars.Length; i++)
+            {
+                if (Char.IsUpper(chars[i]))
+                {
+                    queue.Enqueue(i);
+                    Console.WriteLine("true");
+                }
+            }
+            int[] response = queue.ToArray();
+            return response;
+            
+        } 
+
+        static void Main(string[] args)
+        {
+            int[] array = IndexOfCapitals("IGen");
+            foreach(int i in array)
+            {
+                Console.WriteLine(i);
+            }
+            Console.ReadLine();
+        }
+    }
+}
